@@ -46,36 +46,43 @@
         <span class="dois"></span>
       </button>
       <div class="opcoes">
-        <button>
-          <img src="./assets/files/images/cursor-square-svgrepo-com 1.svg" class="icone" />
-          <p>Inicio</p>
-        </button>
-        <button>
-          <img src="./assets/files/images/portfolio.svg" class="icone" />
-          <p>Portfólio</p>
-        </button>
-        <button>
-          <img src="./assets/files/images/foguete.svg" class="icone" />
-          <p>Habilidades</p>
-        </button>
-        <button class="entrar">
+        <a href="#inicio">
+          <button>
+            <img src="./assets/files/images/cursor-square-svgrepo-com 1.svg" class="icone" />
+            <p>Inicio</p>
+          </button>
+        </a>
+        <a href="#templates">
+          <button>
+            <img src="./assets/files/images/portfolio.svg" class="icone" />
+            <p>Portfólio</p>
+          </button>
+        </a>
+        <a href="#habilidades">
+          <button>
+            <img src="./assets/files/images/foguete.svg" class="icone" />
+            <p>Habilidades</p>
+          </button>
+        </a>
+      
+        <button class="entrar" onclick="window.open('https://github.com/lucastteles?tab=repositories', '_blank')">
           <img src="./assets/files/images/github-142-svgrepo-com.svg" class="icone" />
           <p>Acessar Github</p>
         </button>
-        <button class="hospedar">
+
+        <button class="hospedar" onclick="baixarCurriculo()">
           <img src="./assets/files/images/icone-check.svg" class="icone" />
-          <p>Baixar curriculo</p>
+          <p>Baixar currículo</p>
         </button>
+
       </div>
     </div>
-    <!-- Tamanho -->
-    <!-- <div class="tamanho"></div> -->
   </nav>
 
   <!-- 
     seção apresentação 
   -->
-  <section class="apresentacao">
+  <section class="apresentacao" id="inicio">
     <div class="texto">
       <div class="tag">
         <img src="./assets/files/images/icone-brasil.svg" />
@@ -114,10 +121,10 @@
       <img src="./assets/files/images/Circulo.png" class="nuvem" />
     </div>
     <div class="btn-group">
-      <button class="portfolio">
+      <button onclick="window.open('https://github.com/lucastteles?tab=repositories', '_blank')" class="portfolio">
         Portfolio <i class="ri-arrow-right-up-line"></i>
       </button>
-      <button class="hire">Download CV</button>
+      <button class="hire" onclick="baixarCurriculo()">Download CV</button>
     </div>
   </section>
   <section class="projetos nome figma" id="templates">
@@ -323,7 +330,7 @@
   <!-- 
     seção servidores 
   -->
-  <section class="habilidades">
+  <section class="habilidades" id="habilidades">
     <img src="./assets/files/images/divisor 2.svg" class="divisor">
     <div class="titulo animado">
       <h3>EXCLUSIVIDADE</h3>
@@ -434,7 +441,9 @@
         Atualmente, estou desenvolvendo um ERP para a Montanha Calçados, focado na gestão de vendas e estoque,
         garantindo interfaces intuitivas e responsivas.
       </p>
-      <button>
+
+      <button
+        onclick="window.open('https://wa.me/5521975518853?text=Olá!%20Tenho%20interesse%20no%20seu%20trabalho.', '_blank')">
         <div class="icone">
           <img src="./assets/files/images/icone-whatsapp.svg" />
         </div>
@@ -503,9 +512,8 @@
   <script src="./assets/js/pages/index/nav.js"></script>
   <script src="./assets/js/pages/index/section-servidores.js"></script>
   <script src="./assets/js/pages/index/section-planos.js"></script>
-  <script src="./assets/js/pages/index/section-duvidas.js"></script>
+  <script src="./assets/js/pages/index/section-download.js"></script>
   <script src="./assets/js/pages/index/section-velocidade.js"></script>
   <script src="./assets/js/pages/index/animar-section.js"></script>
 </body>
-
 </html>
