@@ -1,0 +1,252 @@
+
+section.sobre {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background-color: var(--cor-branco);
+  padding: 80px 0px 00px 0px;
+}
+section.sobre .texto {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 30px 60px 60px 60px;
+  width: 50%;
+}
+section.sobre .texto .tag {
+  display: flex;
+  align-items: center;
+}
+section.sobre .texto .tag img {
+  width: 100%;
+  max-width: 15px;
+  margin: 0 10px 0 0;
+}
+section.sobre .texto .tag h3 {
+  font-family: var(--light);
+  font-size: var(--f2);
+  color: var(--cor-preto);
+  margin: 0px;
+}
+section.sobre .texto .tag h3 span {
+  font-family: var(--semibold);
+}
+section.sobre .texto h1 {
+  font-family: var(--semibold);
+  font-size: var(--f6);
+  color: var(--cor-preto);
+  line-height: 1.3;
+  margin: 15px 0 0 0;
+  width: 100%;
+  max-width: 600px;
+}
+section.sobre .texto h1 span {
+  color: var(--cor-laranja);
+}
+section.sobre .texto p {
+  font-family: var(--light);
+  font-size: var(--f3);
+  color: var(--cor-preto);
+  line-height: 1.5;
+  margin: 10px 0 0 0;
+  width: 100%;
+  max-width: 600px;
+}
+section.sobre .texto button {
+  display: flex;
+  align-items: center;
+  /* background-color: var(--cor-laranja); */
+  background-color: transparent;
+  padding: 10px 25px 10px 10px;
+  border-radius: 5px;
+  border: 1px solid var(--cor-preto);
+  margin: 20px 0 0 0;
+  transition: all 0.3s;
+}
+
+section.sobre .texto button:hover {
+  background-color: var(--cor-laranja);
+  border: none;
+}
+
+section.sobre .texto button h3 {
+  font-family: var(--bold);
+  font-size: var(--f3);
+  color: var(--cor-preto);
+  margin: 0px;
+}
+
+/* Mudança da cor do h3 no hover */
+section.sobre .texto button:hover h3 {
+  color: #fff;
+}
+
+section.sobre .texto button .icone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--cor-preto);
+  margin: 0 10px 0 0;
+}
+section.sobre .texto button .icone img {
+  width: 100%;
+  max-width: 20px;
+}
+section.sobre .imagem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  position: relative;
+}
+section.sobre .imagem img.homem {
+  width: 100%;
+  max-width: 500px;
+  z-index: 2;
+}
+
+section.sobre .imagem img.nuvem {
+  width: 100%;
+  position: absolute;
+  margin-left: 60px;
+  z-index: 1;
+  animation: nuvemsobre 55s linear infinite;
+}
+@keyframes nuvemsobre {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes quadrosobre {
+  0% {
+    filter: brightness(100%);
+  }
+  50% {
+    filter: brightness(130%);
+  }
+  100% {
+    filter: brightness(100%);
+  }
+}
+@keyframes iconeImagemsobreWordpress {
+  0% {
+    filter: brightness(100%);
+    transform: translate(0, 0);
+  }
+  50% {
+    filter: brightness(110%);
+    transform: translate(20px, 0);
+  }
+  100% {
+    filter: brightness(100%);
+    transform: translate(0, 0);
+  }
+}
+@keyframes iconeImagemsobreElementor {
+  0% {
+    filter: brightness(100%);
+    transform: translate(0, 0);
+  }
+  50% {
+    filter: brightness(110%);
+    transform: translate(0, 20px);
+  }
+  100% {
+    filter: brightness(100%);
+    transform: translate(0, 0);
+  }
+}
+@keyframes iconeImagemsobreFoguete {
+  0% {
+    filter: brightness(100%);
+    transform: translate(0, 0);
+  }
+  50% {
+    filter: brightness(110%);
+    transform: translate(0, -20px);
+  }
+  100% {
+    filter: brightness(100%);
+    transform: translate(0, 0);
+  }
+}
+/* 
+Responsivo 
+*/
+@media screen and (max-width: 1000px) {
+  section.sobre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0px;
+  }
+  section.sobre .texto {
+    text-align: start;
+    padding: 10px 30px 40px 30px;
+    width: 100%;
+  }
+  section.sobre .texto .tag img {
+    max-width: 13px;
+    margin: 0 8px 0 0;
+  }
+  section.sobre .texto .tag h3 {
+    font-size: var(--f1);
+  }
+  section.sobre .texto h1 {
+    font-size: var(--f5);
+    max-width: 300px;
+  }
+  section.sobre .texto p {
+    font-size: var(--f2);
+    max-width: 350px;
+    
+  }
+  section.sobre .texto button {
+    padding: 10px 35px 10px 10px;
+    margin: 15px 0 0 0;
+  }
+  section.sobre .texto button h3 {
+    font-size: var(--f2);
+  }
+  
+  section.sobre .imagem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+  }
+  section.sobre .imagem img.homem {
+    max-width: 300px;
+  }
+  @keyframes homemsobre {
+    0% {
+      filter: brightness(100%);
+      transform: translate(0, 0);
+    }
+    50% {
+      filter: brightness(110%);
+      transform: translate(-30px, 0);
+    }
+    100% {
+      filter: brightness(100%);
+      transform: translate(0, 0);
+    }
+  }
+  section.sobre .imagem img.nuvem {
+    max-width: 350px;
+  }
+  
+}

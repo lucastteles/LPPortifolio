@@ -1,0 +1,317 @@
+/* <section class="apresentacao"> */
+section.contato {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: var(--cor-escuro);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+  padding: 110px 60px 60px 60px;
+}
+
+.circulo-radial {
+  position: absolute;
+  top: -350px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 700px;
+  height: 700px;
+  border-radius: 50%;
+  z-index: 0;
+  background: radial-gradient(#956dea82, transparent 50%);
+  pointer-events: none;
+  animation: circulo-radial 10s linear infinite;
+}
+
+@keyframes circulo-radial {
+  0% {
+    opacity: 0.5;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.5;
+  }
+}
+
+section.contato .titulo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 80px 60px 60px 60px;
+  width: 50%;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 70%;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.login-form h2 {
+  font-weight: bold;
+  margin: 20px 0 20px 0;
+  text-align: center;
+  font-family: var(--bold);
+  font-size: 60px;
+  color: var(--cor-branco);
+  line-height: 1.1;
+  width: 100%;
+  text-transform: uppercase;
+}
+
+.login-form h2 span {
+  color: var(--cor-laranja);
+}
+
+.login-form p {
+  font-size: 1rem;
+  color: #555;
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: var(--light);
+  color: var(--cor-branco);
+  line-height: 1.2;
+  margin: 10px 0 10px 0px;
+}
+
+.coolinput {
+  display: flex;
+  flex-direction: column;
+  position: static;
+  width: 100%;
+}
+
+.coolinput label.text {
+  color: var(--cor-branco);
+  position: relative;
+  top: 0.5rem;
+  margin: 0 0 0 10px;
+  padding: 0 3px;
+  width: fit-content;
+  z-index: 999;
+  font-family: var(--light);
+  font-size: var(--f2);
+}
+
+.coolinput input[type="email"],
+.coolinput input[type="text"],
+.coolinput input[type="tel"] {
+  padding: 15px 19px 20px 45px;
+  border: 1px #383839 solid;
+  border-radius: 5px;
+  background: #1b1c20;
+  width: 100%;
+  color: #fff;
+  font-family: var(--light);
+  font-size: var(--f2);
+}
+
+.coolinput input[type="text"].input:focus {
+  outline: none;
+}
+
+.input-container i img {
+  width: 22px;
+}
+
+.input-container {
+  position: relative;
+}
+
+.coolinput .icon {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  color: #9ca1ba;
+  font-size: 20px;
+}
+
+button {
+  display: flex;
+  align-items: center;
+  background-color: var(--cor-laranja);
+  padding: 10px 25px 10px 10px;
+  border-radius: 5px;
+  transition: all 0.3s;
+  text-align: center;
+  justify-content: center;
+}
+
+.button-login {
+  width: 100%;
+  margin: 20px 0 0 0;
+  padding: 15px 35px 15px 10px;
+}
+
+button:hover {
+  filter: brightness(110%);
+}
+
+button h3 {
+  font-family: var(--bold);
+  font-size: var(--f3);
+  color: var(--cor-branco);
+  text-transform: uppercase;
+}
+
+button .icone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin: 0 10px 0 0;
+}
+button .icone img {
+  width: 100%;
+  max-width: 25px;
+}
+.mensagem {
+  display: none;
+  position: fixed;
+  top: 90px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background-color: var(--cor-branco);
+  padding: 30px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 600px;
+  z-index: 999;
+}
+
+.mensagem h3 {
+  font-family: var(--bold);
+  font-size: var(--f2);
+  color: #01a42a;
+}
+
+.mensagem p {
+  font-family: var();
+  font-size: var(--f2);
+  color: var(--cor-preto);
+}
+
+.mensagem.sucesso {
+  background-color: var(--cor-branco);
+  color: white;
+}
+
+.mensagem.erro {
+  background-color: #f44336;
+  color: white;
+}
+
+/* 
+Responsivo 
+*/
+@media screen and (max-width: 1000px) {
+  section.contato {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    padding: 30px 30px 30px;
+  }
+
+  section.contato .titulo {
+    align-items: center;
+    text-align: center;
+    padding: 30px 30px 40px 30px;
+    width: 100%;
+  }
+
+  section.contato .titulo h1 {
+    font-size: var(--f5);
+    max-width: 400px;
+  }
+
+  section.contato .titulo p {
+    font-size: var(--f3);
+    max-width: 550px;
+    width: 100%;
+  }
+
+  section.contato .titulo button {
+    padding: 10px 35px 10px 10px;
+    margin: 15px 0 0 0;
+  }
+
+  section.contato .titulo button h3 {
+    font-size: var(--f3);
+  }
+
+  section.contato .imagem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-top: 10px;
+  }
+
+  section.contato img.divisor {
+    width: 150%;
+  }
+
+  .login-form h2 {
+    font-size: var(--f5);
+  }
+
+  .login-form p {
+    font-size: clamp(1rem, 1vw, 3.5rem);
+  }
+
+  .button-login {
+    padding: 15px 35px 15px 10px;
+    margin: 15px 0 0 0;
+  }
+
+  button h3 {
+    font-size: var(--f2);
+  }
+
+  .circulo.um {
+    left: 14%;
+    top: 12%;
+    max-height: 300px;
+    max-width: 300px;
+    min-width: 300px;
+  }
+
+  .circulo {
+    position: absolute;
+    transform: rotate(40deg);
+    z-index: 1;
+    background-color: transparent;
+    border-bottom: dashed 5px #f30505;
+    border-left: dashed 4px #f30505;
+    margin-left: -90px;
+  }
+
+  .login-form {
+    padding: 20px;
+    flex: 1;
+    min-width: 100%;
+    min-height: unset;
+    max-height: unset;
+    padding: 0px;
+  }
+
+  .mensagem {
+    width: 100%;
+    max-width: 300px;
+  }
+}

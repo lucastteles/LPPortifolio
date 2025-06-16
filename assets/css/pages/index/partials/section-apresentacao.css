@@ -1,0 +1,303 @@
+section.apresentacao {
+  display: flex;
+  background-color: var(--cor-preto);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 40px 0px 00px 0px;
+}
+
+section.apresentacao .texto {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 80px 60px 60px 60px;
+  width: 50%;
+  align-items: center;
+  text-align: center;
+  padding: 90px 30px 40px 30px;
+  width: 100%;
+}
+
+section.apresentacao .texto .tag {
+  display: flex;
+  align-items: center;
+  background-color: #2f2f2f;
+  border: solid 1px #f1f1f1;
+  border-radius: 35px;
+  padding: 10px 25px 10px 10px;
+}
+
+section.apresentacao .texto .tag img {
+  width: 100%;
+  max-width: 15px;
+  margin: 0 10px 0 0;
+}
+
+section.apresentacao .texto .tag h3 {
+  font-family: var(--light);
+  font-size: var(--f2);
+  color: var(--cor-branco);
+}
+
+section.apresentacao .texto h1 {
+  font-family: var(--semibold);
+  font-size: 95px;
+  color: var(--cor-branco);
+  line-height: 1;
+  margin: 35px 0 0 0;
+  width: 100%;
+  position: absolute;
+}
+
+section.apresentacao .texto h1 .cor {
+  background: linear-gradient(270deg, #946dea, #bc76ee, #946dea);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientMove 4s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.linha-quebrada {
+  display: block;
+}
+
+section.apresentacao .imagem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 95px 0 0 0;
+}
+
+section.apresentacao .imagem img.homem {
+  width: 100%;
+  max-width: 320px;
+  height: 607px;
+  z-index: 2;
+}
+
+section.apresentacao .imagem img.nuvem {
+  top: 198px;
+  position: absolute;
+  z-index: 0;
+  animation: nuvemApresentacao 15s linear infinite;
+}
+
+section.apresentacao .btn-group {
+  position: absolute;
+  z-index: 99999;
+  top: 750px;
+  background: #c1c1c100;
+  padding: 10px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  box-shadow: 0px 0px 0px 1px #fff;
+  backdrop-filter: blur(2px);
+}
+
+section.apresentacao .btn-group .portfolio {
+  padding: 14px 20px;
+  border-radius: 50px;
+  background: var(--cor-laranja);
+  color: #fff;
+  font-size: 22px;
+  border: 1px solid #fff;
+  font-weight: 700;
+  font-family: var(--semibold);
+}
+
+section.apresentacao .btn-group .hire {
+  padding: 14px 20px;
+  border-radius: 50px;
+  background: transparent;
+  color: #fff;
+  font-size: 22px;
+  border: none;
+  font-family: var(--semibold);
+  transition: all 0.5s;
+}
+
+section.apresentacao .btn-group .hire:hover {
+  background-color: #ffffff10;
+  border: 1px solid var(--cor-laranja);
+  color: var(--cor-branco);
+}
+
+section.apresentacao .text {
+  width: 100%;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  padding: 0px 100px;
+  color: #b1b1b1;
+  margin-top: 250px;
+  position: absolute;
+}
+
+section.apresentacao .text .left {
+  width: 50%;
+}
+
+section.apresentacao .text .left i {
+  font-size: 44px;
+}
+
+section.apresentacao .text .left p {
+  font-family: var(--light);
+  font-size: var(--f3);
+}
+
+section.apresentacao .text .right {
+  width: 50%;
+  text-align: right;
+}
+
+section.apresentacao .text .right i {
+  font-size: 28px;
+  color: #feb03a;
+}
+
+section.apresentacao .text .right h2 {
+  font-size: 44px;
+  font-weight: 600;
+  color: var(--cor-branco);
+  font-family: var(--semibold);
+}
+
+section.apresentacao .text .right p {
+  font-family: var(--light);
+  font-size: var(--f3);
+
+}
+
+/* 
+Responsivo 
+*/
+@media screen and (max-width: 1000px) {
+  section.apresentacao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0px 00px 0px;
+  }
+
+  section.apresentacao .texto {
+    align-items: center;
+    text-align: center;
+    padding: 60px 30px 40px 30px;
+    width: 100%;
+  }
+
+  section.apresentacao .texto .tag img {
+    max-width: 13px;
+    margin: 0 8px 0 0;
+  }
+
+  section.apresentacao .texto .tag h3 {
+    font-size: var(--f1);
+  }
+
+  section.apresentacao .texto h1 {
+    font-size: var(--f6);
+    max-width: 300px;
+    margin: 55px 0 0 0;
+  }
+
+  section.apresentacao .text .left p {
+    font-size: var(--f4);
+  }
+
+  section.apresentacao .text .right p {
+    font-size: var(--f3);
+  }
+
+  section.apresentacao .text .left i {
+    font-size: 34px;
+  }
+
+  section.apresentacao .text .right h2 {
+    font-size: var(--f6);
+  }
+
+  section.apresentacao .imagem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+  }
+
+  section.apresentacao .imagem img.homem {
+    max-width: 300px;
+  }
+
+  section.apresentacao .imagem {
+    margin-top: 0px;
+  }
+
+  section.apresentacao .imagem img.homem {
+    max-width: 250px;
+    height: auto;
+  }
+
+  section.apresentacao .imagem img.nuvem {
+    top: 190px;
+    width: 100%;
+    max-width: 400px;
+    height: 400px;
+    min-width: 700px;
+  }
+
+  section.apresentacao .btn-group {
+    gap: 10px;
+    width: 90%;
+    max-width: 400px;
+    margin-top: 120px;
+  }
+
+  section.apresentacao .btn-group button {
+    width: 100%;
+    text-align: center;
+  }
+
+  section.apresentacao .text {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    position: relative;
+  }
+
+  section.apresentacao .text .left,
+  section.apresentacao .text .right {
+    width: 100%;
+    text-align: center;
+    margin-top: 25px;
+  }
+
+  section.apresentacao .btn-group .hire{
+    font-size: 17px;
+  }
+  section.apresentacao .btn-group .portfolio {
+    font-size: 17px;
+}
+}

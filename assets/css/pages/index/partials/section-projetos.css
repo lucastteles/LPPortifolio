@@ -1,0 +1,448 @@
+section.projetos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  background-color: #EFEFEF;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+
+section.projetos::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+section.projetos * {
+  position: relative;
+  z-index: 2;
+}
+
+section.projetos .titulo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 100px 0 40px 0;
+}
+
+section.projetos .titulo h3 {
+  font-family: "Alexandria";
+  font-weight: 300;
+  font-size: 14px;
+  letter-spacing: 8px;
+  color: #000;
+  font-family: var(--light);
+}
+
+section.projetos .titulo h2 {
+  font-family: "Alexandria";
+  font-family: var(--semibold);
+  font-weight: 700;
+  font-size: 40px;
+  color: #000;
+  line-height: 1.2;
+  max-width: 700px;
+  margin: 10px 0;
+  text-transform: uppercase;
+}
+
+section.projetos .titulo h2 span {
+  background: linear-gradient(270deg, #946dea, #ab6ad9, #946dea);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientMove 4s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+section.projetos .titulo p {
+  font-family: "Figtree";
+  font-weight: 300;
+  font-size: 16px;
+  color: #000;
+  line-height: 1.5;
+  max-width: 700px;
+  font-family: var(--light);
+}
+
+section.projetos .tipo {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0 80px 0px 80px;
+}
+
+section.projetos .tipo img {
+  max-height: 60px;
+  margin: 0 0 0 5px;
+}
+
+section.projetos .tipo h2 {
+  font-family: "Figtree";
+  font-weight: 300;
+  font-size: 18px;
+  color: #000;
+  margin: 0 0 0 20px;
+  font-family: var(--semibold);
+
+}
+
+section.projetos .slide {
+  /* display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 50px 60px 0 80px;
+  width: 100%; */
+
+  display: flex;
+  justify-content: flex-start;
+  overflow-x: auto;
+  padding: 40px 80px 180px 60px;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  transition: all .3s;
+  width: 100%;
+
+}
+
+section.projetos.figma .slide {
+  padding: 25px 70px 80px 70px;
+}
+
+section.projetos .slide::-webkit-scrollbar {
+  display: none;
+}
+
+section.projetos .slide .item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 320px;
+  min-width: 320px;
+  background-color: #fff;
+  border-radius: 10px;
+  margin: 25px 10px 0 10px;
+  padding: 0 0 40px 0;
+  position: relative;
+  transition: all 0.3s;
+  border: solid 1px #6b6b6b59;
+  opacity: .5;
+  border-bottom: solid 2px #946dea;
+}
+
+section.projetos .slide .item .icone {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section.projetos .slide .item .icone {
+  min-width: 100%;
+  min-height: 70%;
+  overflow: hidden;
+  border-radius: 10px 10px 0 0;
+}
+
+section.projetos .slide .item .icone img {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+  transition: transform 0.7s ease-in-out;
+
+}
+
+section.projetos .slide .item .texto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+}
+
+section.projetos .slide .item .texto h3 {
+  font-family: "Figtree";
+  font-weight: 300;
+  font-size: 18px;
+  color: #000;
+  line-height: 1.5;
+  margin: 0 0 5px 0;
+  width: 100%;
+  font-family: var(--light);
+}
+
+section.projetos .slide .item .texto p {
+  font-family: "Figtree";
+  font-weight: 300;
+  font-size: 12px;
+  color: #26292e;
+  font-family: var(--light);
+}
+
+section.projetos .slide .item .botoes {
+  display: flex;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+section.projetos .slide .item a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Figtree";
+  font-weight: 700;
+  font-size: 12px;
+  color: #000;
+  background-color: #ffffff05;
+  border: solid 1px #6b6b6b59;
+  width: 50%;
+  height: 40px;
+  transition: all 0.3s;
+  font-family: var(--light);
+}
+
+section.projetos .slide .item a:hover {
+  background-color: #ffffff10;
+}
+
+section.projetos .slide .item .btn-projeto {
+  border-radius: 0 0 0px 10px;
+}
+
+section.projetos .slide .item .btn-gitHub {
+  border-radius: 0 0 10px 0;
+}
+
+
+section.especializados.areas button.avancar,
+section.especializados.areas button.voltar {
+  bottom: 820px;
+}
+
+button.voltar {
+  position: absolute;
+  bottom: 820px;
+  left: 50px;
+  transform: rotate(90deg);
+  z-index: 3;
+  border-radius: 50%;
+  width: 65px;
+  height: 65px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  border: none;
+  background: #454545;
+}
+
+button.voltar svg {
+  width: 30px;
+  height: 30px;
+  fill: #EFEFEF;
+  display: block;
+}
+
+
+button.avancar {
+  background-color: transparent;
+  bottom: 820px;
+  position: absolute;
+  right: 50px;
+  transform: rotate(-90deg);
+  z-index: 3;
+  border-radius: 50%;
+  width: 65px;
+  height: 65px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  border: none;
+  background: #454545;
+}
+
+button.avancar svg {
+  width: 30px;
+  height: 30px;
+  fill: #EFEFEF;
+  display: block;
+}
+
+.slide.animado,
+.texto.animado {
+  opacity: 1;
+  transform: translateY(0)
+}
+
+.item {
+  transition-delay: .2s
+}
+
+section.projetos .slide .item.primario {
+  margin: 0 25px;
+  opacity: 1;
+  transform: scale(1.08)
+}
+
+section.projetos .slide .item.primario img {
+  transform: scale(1.1)
+}
+
+
+/****************/
+
+
+section.especializados.areas button.avancar-angular,
+section.especializados.areas button.voltar-angular {
+  bottom: 280px
+}
+
+button.voltar-angular {
+  position: absolute;
+  bottom: 280px;
+  left: 50px;
+  transform: rotate(90deg);
+  z-index: 3;
+  border-radius: 50%;
+  width: 65px;
+  height: 65px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  border: none;
+  background: #454545;
+}
+
+button.voltar-angular svg {
+  width: 30px;
+  height: 30px;
+  fill: #EFEFEF;
+  display: block;
+}
+
+
+button.avancar-angular {
+  background-color: transparent;
+  bottom: 280px;
+  position: absolute;
+  right: 50px;
+  transform: rotate(-90deg);
+  z-index: 3;
+  border-radius: 50%;
+  width: 65px;
+  height: 65px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  border: none;
+  background: #454545;
+}
+
+button.avancar-angular svg {
+  width: 30px;
+  height: 30px;
+  fill: #EFEFEF;
+  display: block;
+}
+
+
+
+@media screen and (max-width: 1000px) {
+  section.projetos {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+
+  section.projetos.nome .titulo {
+    padding: 40px 30px;
+  }
+
+  section.projetos .titulo h3 {
+    font-size: var(--f3);
+    font-family: var(--light);
+  }
+
+  section.projetos .titulo h2 {
+    font-size: var(--f5);
+    font-family: var(--semibold);
+  }
+
+  section.projetos .titulo p {
+    font-size: var(--f3);
+    font-family: var(--light);
+  }
+
+  section.projetos .tipo {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 30px 20px 30px;
+  }
+
+  section.projetos .tipo img {
+    max-height: 30px;
+  }
+
+  section.projetos.figma .tipo h2 {
+    margin: 15px 0 0 0;
+  }
+
+  section.projetos.figma .slide {
+    padding: 0 20px 80px 20px;
+  }
+
+  button.avancar,
+  button.voltar {
+    display: none
+  }
+
+.imagens-icones{
+display: flex;
+}
+}
+
+@media screen and (max-width: 720px) {
+  section.projetos .slide .item {
+    width: 100%;
+    margin: 0 8px;
+    min-width: 290px;
+    opacity: 1;
+    width: 290px;
+  }
+
+  section.projetos .slide .item.primario {
+    transform: scale(1);
+    margin: 0 8px;
+  }
+}

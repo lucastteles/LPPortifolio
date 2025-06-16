@@ -1,0 +1,12 @@
+/* Global */
+@import '../../global/global.css';
+
+/* Partials */
+@import './partials/nav.css';
+@import './partials/section-apresentacao.css';
+@import './partials/section-habilidades.css';
+@import './partials/section-sobre.css';
+@import './partials/section-projetos.css';
+@import './partials/section-contato.css';
+
+
